@@ -1,6 +1,6 @@
 # log-analyzer
 
-# High-Volume Log File Analyzer (C++17)
+
 
 ## Architecture Overview
 The system is divided into three layers:
