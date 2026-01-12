@@ -68,7 +68,7 @@ public:
             logs_by_service[service].push_back({ts, req_id, latency});
         }
 
-        // Sort logs per service by timestamp
+      
         for (auto& [service, logs] : logs_by_service) {
             std::sort(logs.begin(), logs.end(),
                       [](const LogEntry& a, const LogEntry& b) {
@@ -143,7 +143,8 @@ int main() {
     analyzer.ingestFile("logs.txt");
     analyzer.computeAnalytics();
 
-    // Example query
+  
     auto results = analyzer.query("auth", 1700000010000, 1700000013000);
     std::cout << "Query Results: " << results.size() << " entries\n";
 }
+
